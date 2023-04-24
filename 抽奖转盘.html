@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>某讯大转盘，有命你就来</title>
 <style>
     body{
@@ -75,6 +77,11 @@
 </head>
 <body>            
     <h3 style="text-align:center;margin-top: 10%;color:white">幸运大轮盘哦(模仿某企鹅写的，所以概率懂都懂)</h3>
+    <h5 style="opacity: 0.4;">
+        ps:参与方式：在本地毯任意消费一次就可以参与哦，并且只能当时参与过了就不认咯，感谢！
+        <br>
+        ps:毕竟咱开不起服务器所以这些数据没法保存哦，抱歉了...
+    </h5>
     <div id="container">
         <ul id="list">
             <!-- img标签放奖品图片 -->
@@ -129,7 +136,7 @@
     function startinit(num) {
         var i = 0;  //定义一个i 用来计算抽奖跑动的总次数
         var t =200;  //抽奖跑动的速度 初始为200毫秒
-        var rounds = 5;  //抽奖转动的圈数
+        var rounds = 3;  //抽奖转动的圈数
         var rNum = rounds*8;  //标记跑动的次数（这是一个条件判断分界线）
         timer = setTimeout(startscroll, t);//每t毫秒执行startscroll函数
 
@@ -156,17 +163,17 @@
             if( i >= rNum+num){//当i大于转rNum加随机数字num次计时器结束，出现提示框提示中奖信息
 
                 if (num==1) {
-                   message.innerHTML="恭喜你中了迷你贴纸张";
+                   message.innerHTML="恭喜你中了迷你贴纸1张";
                 }else if(num==2){
                    message.innerHTML="恭喜你中了新年挂件1个";
                 }else if(num==3){
-                   message.innerHTML="恭喜你中了参与奖果姿果味";
+                   message.innerHTML="恭喜你中了参与奖果姿果味1元代金卷";
                 }else if(num==4){
-                   message.innerHTML="恭喜你中了迷你贴纸1张";
+                   message.innerHTML="恭喜你中了迷你贴纸3张";
                 }else if(num==5){
-                   message.innerHTML="恭喜你中了新年挂件2个";
+                   message.innerHTML="恭喜你中了迷你贴纸2个";
                 }else if(num==6){
-                   message.innerHTML="恭喜你中了微信红包";
+                   message.innerHTML="恭喜你中了微信红包1张";
                 }else if(num==7){
                    message.innerHTML="恭喜你中了小菊花";
                 }else if(num==8){
@@ -185,6 +192,5 @@
 
         }
     }
-
 </script>
 </html>
